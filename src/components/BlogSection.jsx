@@ -25,11 +25,11 @@ function BlogSection() {
       content: 'Blog Content 3',
     },
     {
-      id: 3,
-      title: 'Blog Title 3',
-      description: 'Blog Description 3',
-      image: 'blog3.jpg',
-      content: 'Blog Content 3',
+      id: 4,
+      title: 'Blog Title 4',
+      description: 'Blog Description 4',
+      image: 'blog4.jpg',
+      content: 'Blog Content 4',
     },
   ]);
 
@@ -47,7 +47,7 @@ function BlogSection() {
     <>
     {modalData && (
           <div
-            className="h-full w-full overflow-y-scroll fixed top-0 bg-black bg-opacity-50 flex justify-center"
+            className="h-full w-full overflow-y-scroll z-20 fixed top-0 bg-black bg-opacity-50 flex justify-center"
             tabIndex="-1"
             role="dialog"
             aria-labelledby="blogModalLabel"
@@ -87,9 +87,9 @@ function BlogSection() {
             </div>
           </div>
         )}
-    <section id="blog" className="py-20 bg-gray-100">
+    <section id="blogs" className="py-10 h-full bg-[url('/blog_back.jpeg')] bg-cover bg-no-repeat ">
       <div className="container mx-auto p-4">
-        <h2 className="text-3xl font-bold mb-4">Blog</h2>
+        <center><h2 className="text-4xl font-mono text-white font-bold mb-4">Blogs</h2></center>
         <div className="flex flex-wrap justify-center -mx-4">
           {blogData.map((data) => (
             <div key={data.id} className="w-full md:w-1/2 xl:w-1/3 p-4">
@@ -100,7 +100,7 @@ function BlogSection() {
                 <img
                   src={data.image}
                   alt={data.title}
-                  className="w-full h-64 object-cover rounded-t-lg"
+                  className="w-full h-64 object-cover rounded-t-lg sm:blur-sm transition-all sm:hover:blur-none"
                 />
                 <div className="p-4">
                   <h5 className="text-lg font-bold mb-2">{data.title}</h5>
