@@ -2,11 +2,15 @@ import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import Name from './Name';
 import gsap from 'gsap';
 import { FlipWords } from "./ui/flip-words";
+import { FaHamburger } from 'react-icons/fa';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { CgCloseR } from 'react-icons/cg';
 const HeroSection = () => {
     const textFloat = useRef(null)
     const navLinks = useRef(null)
     const logoWrapper = useRef(null)
     const words = ["Artist", "Actor", "Model"];
+    const [toogleNav,setToogleNav] = useState(false);
     useLayoutEffect(() => {
         let ctx = gsap.context(() => {
             // all your GSAP animation code here
@@ -34,6 +38,9 @@ const HeroSection = () => {
         }
     }, [])
 
+    const handleToogleBtn=()=>{
+        setToogleNav(!toogleNav)
+    }
     return (
         <main>
             <section className='h-screen w-screen sm:bg-[url("hero_back.jpg")] bg-[url("mobile_hero_bg.jpg")] bg-no-repeat bg-cover'>
@@ -49,38 +56,32 @@ const HeroSection = () => {
 
                         <div className='flex sm:hidden items-center'>
                             <button className='bg-transparent border-0 text-white hover:text-gray-300
-                        focus:outline-none focus:ring-2 focus:ring-gray-800'>
-                                <svg className="w-7 h-7" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/
-                            2000/svg">
-                                    <path strokeLinecap="round" strokeLinejoin="round"
-                                        strokeWidth={2} d="M4 6h16M4 12h16M
-                                4 18h16" />
+                        focus:outline-none focus:ring-2 focus:ring-gray-800'
+                        onClick={handleToogleBtn}
+                        >
+                                < GiHamburgerMenu size={24} className={toogleNav?"hidden":"block"}/>
+                                < CgCloseR size={24} className={toogleNav?"block":"hidden"}/>
 
-                                </svg>
 
                             </button>
                         </div>
-                        <div className='sm:flex items-center hidden'>
-                            <ul className='flex'>
-                                <li className='mr-4'>
-                                    <a href='#' className='text-sm font-bold hover:text-gray-400'>Home</a>
+                        <div className={`sm:flex items-center ${toogleNav?"block":"hidden"}`}>
+                            <ul className='flex flex-col absolute sm:flex-row'>
+                                <li className='sm:mr-4'>
+                                    <a href='#' className='text-md sm:text-sm font-bold hover:text-gray-400'>Home</a>
                                 </li>
-                                <li className='mr-4'>
-                                    <a href='#about' className='text-sm font-bold hover:text-gray-400'>About</a>
+                                <li className='sm:mr-4'>
+                                    <a href='#about' className='text-md sm:text-sm font-bold hover:text-gray-400'>About</a>
                                 </li>
-                                <li className='mr-4'>
-                                    <a href='#works' className='text-sm font-bold hover:text-gray-400'>Works</a>
+                                <li className='sm:mr-4'>
+                                    <a href='#works' className='text-md sm:text-sm font-bold hover:text-gray-400'>Works</a>
                                 </li>
-                                <li className='mr-4'>
-                                    <a href='#blogs' className='text-sm font-bold hover:text-gray-400'>Blogs</a>
+                                <li className='sm:mr-4'>
+                                    <a href='#blogs' className='text-md sm:text-sm font-bold hover:text-gray-400'>Blogs</a>
                                 </li>
-                                <li className='mr-4'>
-                                    <a href='#contact' className='text-sm font-bold hover:text-gray-400'>Contact</a>
+                                <li className='sm:mr-4'>
+                                    <a href='#contact' className='text-md sm:text-sm font-bold hover:text-gray-400'>Contact</a>
                                 </li>
-
-
-
                             </ul>
                         </div>
                     </nav>
