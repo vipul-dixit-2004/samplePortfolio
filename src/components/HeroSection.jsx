@@ -43,7 +43,7 @@ const HeroSection = () => {
     }
     return (
         <main>
-            <section className='h-screen w-screen sm:bg-[url("/hero_back.jpg")] bg-[url("mobile_hero_bg.jpg")] bg-no-repeat bg-cover'>
+            <section className='h-screen w-screen sm:bg-[url("/hero_back.jpg")] bg-[url("/mobile_hero_bg.jpg")] bg-no-repeat bg-cover'>
                 {/* navbar */}
                 <div className='flex justify-around items-center text-white h-20 w-full bg-transparent p-4
                         absolute top-0 left-0 right-0'>
@@ -65,7 +65,7 @@ const HeroSection = () => {
 
                             </button>
                         </div>
-                        <div className={`sm:flex items-center ${toogleNav?"block":"hidden"}`}>
+                        <div className={`sm:flex flex items-center ${toogleNav?"block":"hidden"}`}>
                             <ul className='flex flex-col absolute sm:flex-row'>
                                 <li className='sm:mr-4'>
                                     <a href='#' className='text-md sm:text-sm font-bold hover:text-gray-400'>Home</a>
