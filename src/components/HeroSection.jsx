@@ -65,7 +65,7 @@ const HeroSection = () => {
 
                             </button>
                         </div>
-                        <div className={`sm:flex flex items-center ${toogleNav?"block":"hidden"}`}>
+                        <div className={`sm:flex items-center ${toogleNav?"block":"hidden"}`}>
                             <ul className='flex flex-col absolute sm:flex-row'>
                                 <li className='sm:mr-4'>
                                     <a href='#' className='text-md sm:text-sm font-bold hover:text-gray-400'>Home</a>

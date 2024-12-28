@@ -1,6 +1,6 @@
 const Contact = () => {
     return (
-        <section className="contact bg-gray-800 text-white py-8 bg-[url('/contact_back.jpg')] bg-no-repeat bg-fixed bg-cover" id="contact">
+        <section className="contact bg-gray-800 text-white py-8 bg-[url('/contact_back.jpg')] bg-no-repeat sm:bg-fixed bg-cover" id="contact">
             <div className="container mx-auto p-4">
                 <h2 className="text-4xl font-bold mb-6 text-center">Connect with me</h2>
                 <form className="flex flex-col bg-gray-900/20 p-6 rounded-lg backdrop-blur-sm shadow-lg max-w-md mx-auto">
