@@ -27,12 +27,6 @@ const HeroSection = () => {
                 opacity: 0,
                 duration: 1,
                 ease: 'power2.inOut',
-                scrollTrigger: {
-                    trigger: textFloat.current,
-                    scroller: "body",
-                    start: "top 50%",
-                    markers: true
-                }
             })
         });
         return () => {
