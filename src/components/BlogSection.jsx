@@ -89,7 +89,7 @@ function BlogSection() {
         )}
     <section id="blogs" className="py-10 h-full bg-[url('/blog_back.jpeg')] bg-cover bg-no-repeat ">
       <div className="container mx-auto p-4">
-        <center><h2 className="text-4xl font-mono text-white font-bold mb-4">Blogs</h2></center>
+        <h2 className="text-4xl font-mono text-white font-bold mb-4 text-center">Blogs</h2>
         <div className="flex flex-wrap justify-center -mx-4">
           {blogData.map((data) => (
             <div key={data.id} className="w-full md:w-1/2 xl:w-1/3 p-4">

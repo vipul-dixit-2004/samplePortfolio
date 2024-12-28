@@ -76,7 +76,7 @@ const HeroSection = () => {
                                     <a href='#blogs' className='text-sm font-bold hover:text-gray-400'>Blogs</a>
                                 </li>
                                 <li className='mr-4'>
-                                    <a href='#' className='text-sm font-bold hover:text-gray-400'>Contact</a>
+                                    <a href='#contact' className='text-sm font-bold hover:text-gray-400'>Contact</a>
                                 </li>
 
 
