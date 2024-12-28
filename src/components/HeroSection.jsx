@@ -43,7 +43,7 @@ const HeroSection = () => {
     }
     return (
         <main>
-            <section className='h-screen w-screen sm:bg-[url("hero_back.jpg")] bg-[url("mobile_hero_bg.jpg")] bg-no-repeat bg-cover'>
+            <section className='h-screen w-screen sm:bg-[url("/hero_back.jpg")] bg-[url("mobile_hero_bg.jpg")] bg-no-repeat bg-cover'>
                 {/* navbar */}
                 <div className='flex justify-around items-center text-white h-20 w-full bg-transparent p-4
                         absolute top-0 left-0 right-0'>
