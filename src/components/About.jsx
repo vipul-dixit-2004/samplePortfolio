@@ -31,7 +31,7 @@ function About() {
         scale:1.1,
         scrollTrigger:{
           trigger:aboutImg.current,
-          start:"top 20%",
+          start:"top 50%",
           end: "top 50%",  
           toggleActions:"play none none reverse",
 
